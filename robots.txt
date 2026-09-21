@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jahayahashim-tech.github.io/north-east-jet-services/sitemap.xml
