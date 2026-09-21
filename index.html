@@ -143,6 +143,19 @@ body{letter-spacing:.01em}
 }
 </style>
 
+
+<style>
+/* NEJS Operator Request Form */
+.request-section{background:linear-gradient(145deg,#061a3a 0%,#0a2444 55%,#061426 100%);border-top:1px solid rgba(215,173,85,.28);border-bottom:1px solid rgba(215,173,85,.28)}
+.request-wrap{display:grid;grid-template-columns:.78fr 1.22fr;gap:46px;align-items:start}
+.request-copy{padding-top:8px}.request-copy h2{color:#fff}.request-copy p{max-width:560px}
+.request-points{display:grid;gap:12px;margin-top:26px}.request-point{display:flex;gap:12px;align-items:flex-start}.request-point b{color:#d7ad55;font-size:13px;letter-spacing:1px}.request-point span{color:#d9e1ec;font-size:13px}
+.request-card{background:#fff;border:1px solid rgba(215,173,85,.45);border-radius:8px;padding:28px;box-shadow:0 18px 50px rgba(0,0,0,.25);color:#061426}
+.request-card h3{margin:0 0 5px;font-size:22px}.request-card .form-note{margin:0 0 20px;color:#64748b;font-size:12px}
+.request-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.request-field{display:flex;flex-direction:column;gap:6px}.request-field.full{grid-column:1/-1}.request-field label{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#26364b}.request-field input,.request-field select,.request-field textarea{width:100%;border:1px solid #d6dde7;border-radius:4px;background:#f8fafc;padding:12px 13px;font:inherit;font-size:13px;color:#10233c;outline:none}.request-field input:focus,.request-field select:focus,.request-field textarea:focus{border-color:#c79a2b;box-shadow:0 0 0 3px rgba(199,154,43,.12)}.request-field textarea{min-height:110px;resize:vertical}.request-submit{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:18px}.request-submit .btn{border:0;cursor:pointer}.request-submit .btn.outline{color:#061426}.request-status{font-size:12px;color:#64748b;margin:12px 0 0}.request-legal{font-size:10px!important;color:#7b8798!important;margin:14px 0 0!important}
+@media(max-width:850px){.request-wrap{grid-template-columns:1fr}.request-card{padding:22px}.request-grid{grid-template-columns:1fr}.request-field.full{grid-column:auto}}
+</style>
+
 </head>
 
 <body>
@@ -279,6 +292,49 @@ body{letter-spacing:.01em}
   </div>
 </section>
 
+
+<section class="section request-section" id="request">
+  <div class="container request-wrap">
+    <div class="request-copy">
+      <div class="eyebrow">OPERATOR REQUEST</div>
+      <h2>Request ground handling.</h2>
+      <p>Send your movement details directly to the NEJS operations team. The form is designed for private jet, VIP, MEDEVAC, helicopter and charter movements.</p>
+      <div class="request-points">
+        <div class="request-point"><b>01</b><span>Aircraft and movement details in one request.</span></div>
+        <div class="request-point"><b>02</b><span>Airport, ETA/ETD and service requirements captured clearly.</span></div>
+        <div class="request-point"><b>03</b><span>Request opens your email app with a structured operational brief.</span></div>
+      </div>
+    </div>
+    <div class="request-card">
+      <h3>Ground Handling Request</h3>
+      <p class="form-note">Complete the key details below. Fields marked * are required.</p>
+      <form id="nejsRequestForm">
+        <div class="request-grid">
+          <div class="request-field"><label for="company">Operator / Company *</label><input id="company" name="company" required placeholder="Company name"></div>
+          <div class="request-field"><label for="contact">Contact Person *</label><input id="contact" name="contact" required placeholder="Full name"></div>
+          <div class="request-field"><label for="email">Email *</label><input id="email" name="email" type="email" required placeholder="name@company.com"></div>
+          <div class="request-field"><label for="phone">Phone / WhatsApp</label><input id="phone" name="phone" placeholder="+60 ..."></div>
+          <div class="request-field"><label for="aircraft">Aircraft Type *</label><input id="aircraft" name="aircraft" required placeholder="Gulfstream G550"></div>
+          <div class="request-field"><label for="registration">Registration *</label><input id="registration" name="registration" required placeholder="9M-XXXX / NXXXX"></div>
+          <div class="request-field"><label for="airport">Airport / ICAO *</label><input id="airport" name="airport" required placeholder="WMKP / Penang"></div>
+          <div class="request-field"><label for="movement">Movement Type *</label><select id="movement" name="movement" required><option value="">Select</option><option>Arrival</option><option>Departure</option><option>Arrival & Departure</option><option>Ferry Flight</option><option>MEDEVAC</option><option>VIP / Charter</option><option>Helicopter Operation</option></select></div>
+          <div class="request-field"><label for="date">Date *</label><input id="date" name="date" type="date" required></div>
+          <div class="request-field"><label for="eta">ETA / ETD (UTC / LT) *</label><input id="eta" name="eta" required placeholder="e.g. ETA 0600Z / ETD 0830Z"></div>
+          <div class="request-field"><label for="pax">PAX / Crew</label><input id="pax" name="pax" placeholder="e.g. 6 PAX / 2 Crew"></div>
+          <div class="request-field"><label for="services">Main Services Required *</label><select id="services" name="services" required><option value="">Select</option><option>Basic Ground Handling</option><option>Marshalling & Chock</option><option>Pushback / Tow</option><option>Passenger / VIP Handling</option><option>MEDEVAC Support</option><option>CIQ Coordination</option><option>Lavatory / Water</option><option>Transport</option><option>Fuel Coordination</option><option>Multiple Services</option></select></div>
+          <div class="request-field full"><label for="details">Additional Requirements</label><textarea id="details" name="details" placeholder="Belt loader, ambulance access, catering, permit support, special equipment, parking, crew transport, etc."></textarea></div>
+        </div>
+        <div class="request-submit">
+          <button class="btn" type="submit">Prepare Request Email</button>
+          <a class="btn outline" href="mailto:ops@northeastjetservices.com?subject=NEJS%20Ground%20Handling%20Request">Email Operations Directly</a>
+        </div>
+        <p id="requestStatus" class="request-status" aria-live="polite"></p>
+        <p class="request-legal">Submitting this form does not confirm handling availability. NEJS operations will review the request and respond with confirmation, requirements and/or quotation.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
 <section class="section cta">
   <div class="container cta-box">
     <div>
@@ -321,5 +377,40 @@ body{letter-spacing:.01em}
   <a class="primary" href="mailto:ops@northeastjetservices.com?subject=GROUND%20HANDLING%20REQUEST">Request Handling</a>
   <a class="secondary" href="mailto:sales@northeastjetservices.com?subject=NEJS%20SERVICE%20ENQUIRY">Contact Sales</a>
 </div>
+
+<script>
+(function(){
+  const form=document.getElementById('nejsRequestForm');
+  if(!form) return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    const data=new FormData(form);
+    const get=k=>(data.get(k)||'').toString().trim();
+    const subject='NEJS Ground Handling Request | '+get('registration')+' | '+get('airport')+' | '+get('date');
+    const body=[
+      'NORTH EAST JET SERVICES – GROUND HANDLING REQUEST','',
+      'OPERATOR / COMPANY: '+get('company'),
+      'CONTACT PERSON: '+get('contact'),
+      'EMAIL: '+get('email'),
+      'PHONE / WHATSAPP: '+get('phone'),'',
+      'AIRCRAFT TYPE: '+get('aircraft'),
+      'REGISTRATION: '+get('registration'),
+      'AIRPORT / ICAO: '+get('airport'),
+      'MOVEMENT TYPE: '+get('movement'),
+      'DATE: '+get('date'),
+      'ETA / ETD: '+get('eta'),
+      'PAX / CREW: '+get('pax'),
+      'MAIN SERVICES: '+get('services'),'',
+      'ADDITIONAL REQUIREMENTS:',get('details')||'None specified','',
+      'Please review and advise handling availability, operational requirements and quotation.'
+    ].join('\n');
+    const url='mailto:ops@northeastjetservices.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    const status=document.getElementById('requestStatus');
+    status.textContent='Opening your email app with the completed handling request…';
+    window.location.href=url;
+  });
+})();
+</script>
+
 </body>
 </html>
