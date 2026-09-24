@@ -381,7 +381,187 @@ body{letter-spacing:.01em}
   </div>
 </section>
 
+<style>
+.operations-gallery{
+  background:#061426;
+  color:#fff;
+  border-top:1px solid rgba(215,173,85,.25);
+  border-bottom:1px solid rgba(215,173,85,.25);
+}
+.operations-gallery .gallery-head{
+  max-width:850px;
+  margin:0 auto 38px;
+  text-align:center;
+}
+.operations-gallery .gallery-head h2{
+  margin:8px 0 14px;
+}
+.operations-gallery .gallery-head p{
+  color:rgba(255,255,255,.72);
+  line-height:1.7;
+}
+.operations-gallery .gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+.operations-gallery .gallery-card{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(215,173,85,.25);
+  background:#0a1d35;
+  border-radius:14px;
+}
+.operations-gallery .gallery-card img{
+  display:block;
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  transition:transform .4s ease;
+}
+.operations-gallery .gallery-card:hover img{
+  transform:scale(1.04);
+}
+.operations-gallery .gallery-caption{
+  padding:18px 20px 20px;
+}
+.operations-gallery .gallery-caption strong{
+  display:block;
+  color:#d7ad55;
+  font-size:14px;
+  letter-spacing:.04em;
+  margin-bottom:7px;
+}
+.operations-gallery .gallery-caption span{
+  color:rgba(255,255,255,.72);
+  font-size:13px;
+  line-height:1.5;
+}
+.operations-gallery .gallery-note{
+  max-width:900px;
+  margin:34px auto 0;
+  padding:18px 22px;
+  border-left:3px solid #d7ad55;
+  background:rgba(255,255,255,.035);
+  color:rgba(255,255,255,.68);
+  font-size:13px;
+  line-height:1.7;
+}
+@media(max-width:700px){
+  .operations-gallery .gallery-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  .operations-gallery .gallery-caption{
+    padding:15px 16px 17px;
+  }
+}
+</style>
 
+<section class="section operations-gallery" id="operations-gallery">
+  <div class="container">
+
+    <div class="gallery-head">
+      <div class="eyebrow">REAL OPERATIONS</div>
+      <h2>Coordination. Support. Precision.</h2>
+      <p>
+        A visual showcase of aircraft movements, ground support requirements
+        and aviation operations coordinated across Malaysia.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-card">
+        <img src="/images/01-helicopter-operations.webp" alt="Helicopter Operations Support" loading="lazy">
+        <div class="gallery-caption">
+          <strong>Helicopter Operations Support</strong>
+          <span>Ground-side coordination supporting helicopter operations.</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="/images/02-helicopter-ground-support.webp" alt="Helicopter Ground Support" loading="lazy">
+        <div class="gallery-caption">
+          <strong>Helicopter Ground Support</strong>
+          <span>Aircraft positioning, ramp and ground support environment.</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="/images/03-vip-vvip-coordination.webp" alt="VIP VVIP Flight Coordination" loading="lazy">
+        <div class="gallery-caption">
+          <strong>VIP / VVIP Flight Coordination</strong>
+          <span>Ground handling coordination for VIP and VVIP movements.</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="/images/04-medevac-coordination.webp" alt="MEDEVAC Ground Coordination" loading="lazy">
+        <div class="gallery-caption">
+          <strong>MEDEVAC Ground Coordination</strong>
+          <span>Ground-side coordination supporting medical aviation movements.</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="/images/05-ramp-aircraft-support.webp" alt="Ramp and Aircraft Support" loading="lazy">
+        <div class="gallery-caption">
+          <strong>Ramp &amp; Aircraft Support</strong>
+          <span>Ramp-side aircraft support and operational coordination.</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="/images/06-night-operations.webp" alt="Night Operations and Ramp Support" loading="lazy">
+        <div class="gallery-caption">
+          <strong>Night Operations &amp; Ramp Support</strong>
+          <span>Operational coordination for aircraft movements during night operations.</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="/images/07-aircraft-ground-support.webp" alt="Aircraft Ground Support Coordination" loading="lazy">
+        <div class="gallery-caption">
+          <strong>Aircraft Ground Support Coordination</strong>
+          <span>Ground support requirements coordinated with relevant operational parties.</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="/images/08-aircraft-movement.webp" alt="Aircraft Movement and Ramp Coordination" loading="lazy">
+        <div class="gallery-caption">
+          <strong>Aircraft Movement &amp; Ramp Coordination</strong>
+          <span>Ramp and aircraft movement requirements coordinated for each operation.</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="/images/09-vip-aircraft-support.webp" alt="VIP Aircraft Ground Support" loading="lazy">
+        <div class="gallery-caption">
+          <strong>VIP Aircraft Ground Support</strong>
+          <span>Ground-side coordination supporting private and VIP aircraft movements.</span>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="/images/10-multi-aircraft-operations.webp" alt="Multi Aircraft Operations Support" loading="lazy">
+        <div class="gallery-caption">
+          <strong>Multi-Aircraft Operations Support</strong>
+          <span>Coordination of ground support requirements across aircraft movements.</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="gallery-note">
+      NEJS acts as a ground handling coordination partner and coordinates
+      requirements between aircraft operators, flight crews, airport
+      stakeholders and appointed service providers.
+    </p>
+
+  </div>
+</section>
 <section class="section request-section" id="request">
   <div class="container request-wrap">
     <div class="request-copy">
